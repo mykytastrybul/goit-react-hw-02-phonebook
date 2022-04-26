@@ -15,7 +15,7 @@ export default class ContactForm extends Component {
 
     handleChange = e => {
         const { name, value } = e.currentTarget;
-        this.setState({ [name]: value.toLowerCase() });
+        this.setState({ [name]: value });
     };
 
     handleSubmit = e => {

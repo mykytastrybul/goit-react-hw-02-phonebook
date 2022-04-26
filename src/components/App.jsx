@@ -15,8 +15,8 @@ export class App extends Component {
   };
 
   addContact = newContact => {
-    this.state.contacts.some(({ name }) => name === newContact.name)
-      ? console.err(`Contact ${newContact.name} already exists`)
+    this.state.contacts.some(({ name }) => name.toLowerCase() === newContact.name.toLowerCase())
+      ? alert(`Contact ${newContact.name} already exists`)
       : this.setState(({ contacts }) => ({
         contacts: [...contacts, newContact],
       }));
